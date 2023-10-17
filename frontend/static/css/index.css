@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 .container{
     display: grid;
@@ -17,13 +18,7 @@ nav{
     justify-content: space-between;
     width: 100%;
 }
-.giftHeader{
-    display: block;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    padding: 18px 10px ;
-}
+
 .giftHeader:hover{
     cursor: default;
 }
@@ -36,16 +31,83 @@ nav{
     padding: 20px 15px ;
     border-radius: 10px;
 }
+.nav__link>span{
+    vertical-align: top;
+}
 .nav__link:hover{
     background-color: rgb(22, 102, 120);
 }
 
 
-#app{
-    display: grid;
-    grid-template-columns: 70%;
-    justify-content: center;
+/* General Design */
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0px auto;
     margin-top: 30px;
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 27%;
+}
+.aside_options{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 1.5px 2.5px 7.5px rgba(0, 0, 0, 0.48);
+}
+.aside_profile{
+    display: flex;
+    column-gap: 15px;
+    padding: 10px 20px;
+}
+.aside_profile_logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.aside_profile_name{
+    display: flex;
+    font-weight: 600;
+    font-size: 22px;
+    align-items: center;
+}
+.aside_links{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-top: 1px solid black;
+}
+
+.aside_msg{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 1.5px 2.5px 7.5px rgba(0, 0, 0, 0.48);
+}
+.aside_msg_heading{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.aside_msg_links{
+    border-top: 1px solid black;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
 }
 
 /* Explore page design */
@@ -53,7 +115,7 @@ nav{
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-    width: 70%;
+    width: 100%;
 }
 .newitem{
     display: block;
